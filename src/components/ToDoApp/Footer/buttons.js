@@ -1,10 +1,6 @@
-import { nanoid } from "nanoid";
-
-
-
 export const buttons = [
     {
-      "id": nanoid(),
+      "id": "All",
       "name": "selectButton",
       "type": "radio",
       "value": "All",
@@ -12,7 +8,7 @@ export const buttons = [
       "selected": false
     },
     {
-      "id": nanoid(),
+      "id": "Active",
       "name": "selectButton",
       "type": "radio",
       "value": "Active",
@@ -20,7 +16,7 @@ export const buttons = [
       "selected": false
     },
     {
-      "id": nanoid(),
+      "id": "Completed",
       "name": "selectButton",
       "type": "radio",
       "value": "Completed",
