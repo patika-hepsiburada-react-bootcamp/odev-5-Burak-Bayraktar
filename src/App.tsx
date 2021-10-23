@@ -1,10 +1,15 @@
-import React from 'react';
+import { FC } from 'react';
+import ToDoPage from './pages/ToDoApp';
+import './App.scss'
+import { ToDoProvider } from './contexts/ToDoContext';
 
-function App() {
+const App: FC = () => {
   return (
-    <div className="App">
-
-    </div>
+    <ToDoProvider>
+      <div className="app-container">
+        <ToDoPage />
+      </div>
+    </ToDoProvider>
   );
 }
 

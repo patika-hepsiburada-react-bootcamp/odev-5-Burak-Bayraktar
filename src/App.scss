@@ -1,0 +1,5 @@
+.app {
+    &-container {
+        @apply h-screen bg-gray-600 flex justify-center items-center;
+    }
+}

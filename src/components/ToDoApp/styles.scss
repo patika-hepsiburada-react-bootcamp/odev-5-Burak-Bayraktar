@@ -1,0 +1,60 @@
+.app {
+    &-wrapper {
+        @apply bg-gray-500 h-4/5 w-1/2 rounded-xl flex flex-col px-10;
+    }
+}
+
+.to-do {
+    &-input-wrapper {
+        @apply flex items-center h-1/5 mt-10;
+
+        .mark-all-button {
+            @apply mr-1 px-3 text-4xl cursor-pointer transition-colors delay-100;
+            @apply hover:bg-blue-900 hover:text-white;
+        }
+
+        .text {
+            @apply px-3 py-2 w-full;
+        }
+    }
+
+    &-list {
+        @apply h-3/5 overflow-y-scroll;
+    }
+
+    &-item {
+        @apply flex mb-2 bg-gray-400 py-2;
+
+        &-checkbox {
+            @apply w-[50px] scale-150;
+        }
+
+        &-text {
+            @apply w-5/6;
+        }
+    }
+}
+
+.footer {
+    @apply flex justify-between mt-5 py-6;
+
+    .buttons {
+        @apply flex justify-evenly items-center flex-col w-2/3;
+
+        input {
+            @apply invisible;
+        }
+
+        input:checked + .input-label {
+            @apply bg-gray-400 rounded-2xl;
+        }
+
+        .input-label {
+            @apply bg-gray-500 w-2/5 cursor-pointer text-center;
+        }        
+    }
+    .items-left,
+    .clear-button {
+        @apply p-4 bg-gray-400 flex items-center;
+    }
+}
