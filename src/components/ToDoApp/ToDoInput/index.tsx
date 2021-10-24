@@ -24,7 +24,6 @@ const ToDoInput = () => {
   const handleClick = () => {
     const newList = [...toDoList];
     markAsActiveAll = markAsActiveAll ? false : true;
-    debugger;
     const list = newList.map(item => ({...item, isCompleted: markAsActiveAll}))  
     handleSetItemsValue(list)
     setToDoList(list)

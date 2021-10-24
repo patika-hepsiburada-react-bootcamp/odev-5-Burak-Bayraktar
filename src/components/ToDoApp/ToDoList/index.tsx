@@ -6,10 +6,10 @@ import { ITodo } from '../../../interfaces';
 const ToDoList: FC = () => {
     const { toDoList, selectedItem } = useToDo();
     const [list, setList] = useState<ITodo[]>(toDoList);
-    let filteredList;
-    const newList = [...toDoList];
-
+    
     useEffect(() => {
+        let filteredList;
+        const newList = [...toDoList];
         switch (selectedItem.name) {
             case "All":
                 setList(newList);
@@ -26,7 +26,6 @@ const ToDoList: FC = () => {
                 break;
           } 
         
-        console.log(selectedItem)
     }, [selectedItem, toDoList]);
 
     return (
