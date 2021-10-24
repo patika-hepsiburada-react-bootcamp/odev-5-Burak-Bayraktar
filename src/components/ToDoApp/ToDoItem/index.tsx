@@ -1,6 +1,7 @@
 import { ChangeEvent, FC, KeyboardEvent } from 'react'
 import { useToDo } from '../../../contexts/ToDoContext'
 import { ITodo } from '../../../interfaces'
+import "../styles.scss"
 
 const ToDoItem: FC<ITodo> = ({ id, text, isCompleted }) => {
     const { toDoList, setToDoList, handleSetItemsValue  } = useToDo();
@@ -46,7 +47,7 @@ const ToDoItem: FC<ITodo> = ({ id, text, isCompleted }) => {
                 contentEditable={isCompleted ? false : true}
                 spellCheck={false} 
                 onKeyDown={(e: KeyboardEvent<HTMLInputElement>) => changeTaskText(e, id)} 
-                className={`${isCompleted ? 'disable':''}  to-do-item-text`}
+                className={`${isCompleted ? "disable" : ""} to-do-item-text`}
             >
                 { text }
             </span>

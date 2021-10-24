@@ -1,3 +1,8 @@
-# Assignment 5
+# Assignment 5 | To Do App
 
-Still in progress... [(LIVE)](https://eager-bohr-905e89.netlify.app/)
+Technologies used:
+- [React](https://reactjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [SASS](https://sass-lang.com/)
+
+> 🌟 [LIVE](https://eager-bohr-905e89.netlify.app/)

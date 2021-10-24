@@ -1,8 +1,6 @@
 import { nanoid } from "nanoid";
-import { listenerCount } from "process";
 import { ChangeEvent, KeyboardEvent, useState } from "react";
 import { useToDo } from "../../../contexts/ToDoContext";
-import { ITodo } from "../../../interfaces";
 import "../styles.scss";
 
 let markAsActiveAll = false;

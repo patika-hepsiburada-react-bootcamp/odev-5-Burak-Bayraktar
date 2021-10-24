@@ -3,6 +3,8 @@ import ToDoItem from '../ToDoItem'
 import TaskManagers from '../TaskManagers';
 import { useToDo } from '../../../contexts/ToDoContext';
 import { ITodo } from '../../../interfaces';
+import '../styles.scss'
+
 const ToDoList: FC = () => {
     const { toDoList, selectedItem } = useToDo();
     const [list, setList] = useState<ITodo[]>(toDoList);
