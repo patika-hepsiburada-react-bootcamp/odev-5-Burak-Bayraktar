@@ -1,6 +1,6 @@
 .app {
     &-wrapper {
-        @apply bg-gray-500 h-4/5 w-1/2 rounded-xl flex flex-col px-10;
+        @apply bg-gray-500 rounded-xl flex flex-col px-10;
     }
 }
 
@@ -8,13 +8,24 @@
     &-input-wrapper {
         @apply flex items-center h-1/5 mt-10;
 
-        .mark-all-button {
+        .mark-button {
             @apply mr-1 px-3 text-4xl cursor-pointer transition-colors delay-100;
-            @apply hover:bg-blue-900 hover:text-white;
+        }
+
+        .marked {
+            @apply bg-blue-900 text-white;
+        }
+
+        .unmarked {
+            @apply bg-[#F0F0F0] text-black;
         }
 
         .text {
             @apply px-3 py-2 w-full;
+        }
+
+        .text:focus-visible {
+            @apply outline-none;
         }
     }
 
@@ -31,8 +42,16 @@
 
         &-text {
             @apply w-5/6;
+
+            &:focus-visible {
+                @apply outline-none
+            } 
         }
     }
+}
+
+.edit-info {
+    @apply text-sm text-center mb-2;
 }
 
 .footer {
@@ -55,6 +74,6 @@
     }
     .items-left,
     .clear-button {
-        @apply p-4 bg-gray-400 flex items-center;
+        @apply p-4 bg-gray-400 flex items-center h-1/2;
     }
 }

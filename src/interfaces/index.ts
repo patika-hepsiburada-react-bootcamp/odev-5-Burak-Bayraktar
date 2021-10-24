@@ -3,3 +3,8 @@ export interface ITodo {
     text: string,
     isCompleted: boolean
 }
+
+export interface ISelectedItem {
+    index: number,
+    name: string,
+}
