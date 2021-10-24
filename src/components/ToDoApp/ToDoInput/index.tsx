@@ -1,6 +1,8 @@
 import { nanoid } from "nanoid";
+import { listenerCount } from "process";
 import { ChangeEvent, KeyboardEvent, useState } from "react";
 import { useToDo } from "../../../contexts/ToDoContext";
+import { ITodo } from "../../../interfaces";
 import "../styles.scss";
 
 let markAsActiveAll = false;
@@ -33,7 +35,7 @@ const ToDoInput = () => {
   return (
   <>
     <div className="to-do-input-wrapper">
-      <input onClick={handleClick} className={`${markAsActiveAll ? "marked" : "unmarked"} mark-button`} type="button" value="✓" />
+      <input disabled={toDoList.length ? false : true} onClick={handleClick} className={`${markAsActiveAll ? "marked" : "unmarked"} mark-button`} type="button" value="✓" />
       <input
         className="text"
         type="text"

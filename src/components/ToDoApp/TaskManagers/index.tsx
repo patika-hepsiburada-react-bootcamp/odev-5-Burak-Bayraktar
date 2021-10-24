@@ -1,9 +1,9 @@
-import React, { ChangeEvent } from "react";
+import React, { ChangeEvent, FC } from "react";
 import { useToDo } from "../../../contexts/ToDoContext";
 import "../styles.scss";
 import { buttons } from "./buttons.js";
 
-const Footer = () => {
+const TaskManagers: FC = () => {
   const { selectedItem, setSelectedItem, itemsLeft, toDoList, setToDoList, handleSetItemsValue } = useToDo();
   const handleChange = (event: ChangeEvent<HTMLInputElement>, index: number) => {
     setSelectedItem({index: index, name: event.target.value});
@@ -18,7 +18,8 @@ const Footer = () => {
   }
 
   return (
-    <div className="footer">
+    <>
+    <div className="task-managers">
       <span className="items-left">{ itemsLeft } items left</span>
       <div className="buttons">
         {buttons.map((button, index) => (
@@ -44,7 +45,9 @@ const Footer = () => {
       </div>
       <button onClick={handleClick} className="clear-button">Clear Completed</button>
     </div>
+    <div className="credits">Created by <a href="https://github.com/Burak-Bayraktar">Burak-Bayraktar</a></div>
+    </>
   );
 };
 
-export default Footer;
+export default TaskManagers;

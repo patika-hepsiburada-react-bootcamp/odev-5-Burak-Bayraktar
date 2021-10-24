@@ -1,3 +1,4 @@
 .header {
-    @apply text-white w-full text-center pt-20 font-semibold text-3xl;
+    @apply text-white w-full text-center pt-5  font-semibold text-lg;
+    @apply lg:text-3xl lg:pt-20;
 }

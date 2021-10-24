@@ -41,8 +41,16 @@ const ToDoItem: FC<ITodo> = ({ id, text, isCompleted }) => {
     return (
         <div className="to-do-item">
             <input onChange={(event) => toggleCompletedState(event)} className="to-do-item-checkbox" type="checkbox" id={id} name={text} value={text} checked={isCompleted} />
-            <span suppressContentEditableWarning={true} contentEditable="true" spellCheck={false} onKeyDown={(e: KeyboardEvent<HTMLInputElement>) => changeTaskText(e, id)} className="to-do-item-text">{ text }</span>
-            <button onClick={() => handleDelete(id)}>X</button>
+            <span 
+                suppressContentEditableWarning={isCompleted ? false :true} 
+                contentEditable={isCompleted ? false : true}
+                spellCheck={false} 
+                onKeyDown={(e: KeyboardEvent<HTMLInputElement>) => changeTaskText(e, id)} 
+                className={`${isCompleted ? 'disable':''}  to-do-item-text`}
+            >
+                { text }
+            </span>
+            <button className="to-do-item-delete" onClick={() => handleDelete(id)}>X</button>
         </div>
     )
 }

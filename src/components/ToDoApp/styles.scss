@@ -1,15 +1,19 @@
 .app {
     &-wrapper {
-        @apply bg-gray-500 h-4/5 w-1/2 rounded-xl flex flex-col px-10;
+        @apply bg-gray-500 h-[85%] mx-2 rounded-xl flex flex-col px-5 w-[90%] -mt-12;
+        @apply sm:mx-0;
+        @apply md:w-4/5;
+        @apply lg:h-4/5 lg:w-1/2 lg:px-14;
     }
 }
 
 .to-do {
     &-input-wrapper {
-        @apply flex items-center h-1/5 mt-10;
+        @apply flex items-center h-1/5 w-full mt-5;
+        @apply lg:mt-10;
 
         .mark-button {
-            @apply mr-1 px-3 text-4xl cursor-pointer transition-colors delay-100;
+            @apply mr-1 px-3 text-4xl cursor-pointer;
         }
 
         .marked {
@@ -30,7 +34,7 @@
     }
 
     &-list {
-        @apply h-3/5 overflow-y-scroll;
+        @apply h-3/5 overflow-y-auto;
     }
 
     &-item {
@@ -40,12 +44,20 @@
             @apply w-[50px] scale-150;
         }
 
+        &-delete {
+            @apply w-[10%];
+        }
+
         &-text {
-            @apply w-5/6;
+            @apply w-[90%] whitespace-nowrap overflow-x-auto;
 
             &:focus-visible {
                 @apply outline-none
             } 
+        }
+
+        .disable {
+            @apply line-through font-light;
         }
     }
 }
@@ -54,14 +66,16 @@
     @apply text-sm text-center mb-2;
 }
 
-.footer {
-    @apply flex justify-between mt-5 py-6;
+.task-managers {
+    @apply flex justify-between flex-col mt-5 pb-6;
+    @apply md:flex-row md:py-6;
 
     .buttons {
-        @apply flex justify-evenly items-center flex-col w-2/3;
+        @apply flex justify-evenly items-center flex-col w-full my-4;
+        @apply md:w-2/5;
 
         input {
-            @apply invisible;
+            @apply hidden;
         }
 
         input:checked + .input-label {
@@ -69,11 +83,21 @@
         }
 
         .input-label {
-            @apply bg-gray-500 w-2/5 cursor-pointer text-center;
+            @apply bg-gray-500 w-2/5 cursor-pointer text-center mt-1;
+            @apply md:w-4/5;
         }        
     }
     .items-left,
     .clear-button {
-        @apply p-4 bg-gray-400 flex items-center h-1/2;
+        @apply bg-gray-400 flex items-center h-1/2 p-1 justify-center;
+        @apply md:p-4;
+    }
+}
+
+.credits {
+    @apply text-right text-sm;
+
+    a {
+        @apply no-underline font-bold;
     }
 }

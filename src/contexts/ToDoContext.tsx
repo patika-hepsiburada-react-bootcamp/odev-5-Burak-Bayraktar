@@ -1,5 +1,5 @@
 import { createContext, FC, useContext, useState } from "react";
-import { buttons } from "../components/ToDoApp/Footer/buttons";
+import { buttons } from "../components/ToDoApp/TaskManagers/buttons";
 import { ITodo, ISelectedItem} from "../interfaces";
 import { ITodoContext } from "../interfaces/contexts";
 
