@@ -1,6 +1,5 @@
 import { FC, useEffect, useState } from 'react'
 import ToDoItem from '../ToDoItem'
-import TaskManagers from '../TaskManagers';
 import { useToDo } from '../../../contexts/ToDoContext';
 import { ITodo } from '../../../interfaces';
 import '../styles.scss'
@@ -39,7 +38,6 @@ const ToDoList: FC = () => {
                     })
                 }
             </div>
-            <TaskManagers />
         </>
     )
 }

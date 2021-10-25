@@ -45,7 +45,6 @@ const TaskManagers: FC = () => {
       </div>
       <button onClick={handleClick} className="clear-button">Clear Completed</button>
     </div>
-    <div className="credits">Created by <a href="https://github.com/Burak-Bayraktar">Burak-Bayraktar</a></div>
     </>
   );
 };
